@@ -12,7 +12,15 @@ main {
 }
 h1 {
   color: white;
+ text-shadow:
+    5px 5px rgb(100, 4, 4),
+    10px 10px rgb(4, 87, 25),
+    15px 15px rgb(42, 41, 43)
 }
+
+
+
+
 
 /* the animation */
 
@@ -58,6 +66,37 @@ h1 {
 }
 .snow {
   animation: fall ease-in infinite, sway ease-in-out infinite;
-  color: skyblue;
+  color: rgb(236, 231, 150);
   position: absolute;
 }
+
+/*text animation*/
+
+.wave-text span {
+    display: inline-block;
+    font-size: 3rem;
+    animation: wave 2s ease-in-out infinite;
+}
+
+.wave-text span:nth-child(1) {
+    animation-delay: 0s;
+}
+.wave-text span:nth-child(2) {
+    animation-delay: 0.4s;
+}
+.wave-text span:nth-child(3) {
+    animation-delay: 0.8s;
+}
+.wave-text span:nth-child(4) {
+    animation-delay: 1.2s;
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
